@@ -1,8 +1,14 @@
-name = "cybereyeaw-site"
-compatibility_date = "2024-01-01"
+[observability]
+enabled = false
+head_sampling_rate = 1
 
-[site]
-bucket = "./public"
+[observability.logs]
+enabled = true
+head_sampling_rate = 1
+persist = true
+invocation_logs = true
 
-[vars]
-NODE_ENV = "production"
+[observability.traces]
+enabled = false
+persist = true
+head_sampling_rate = 1
